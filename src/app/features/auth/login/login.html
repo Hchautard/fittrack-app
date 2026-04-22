@@ -1,36 +1,94 @@
-<div class="flex w-screen h-screen font-display flex-col items-center justify-center">
-  <div class="form-layout">
-    <div class="heading-layout">
-      <h1 class="heading-title leading">Sign in here</h1>
-    </div>
-    <form class="form-layout" #loginForm="ngForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="email" class="form-label">Email</label>
-        <input
-          type="email"
-          id="email"
-          class="form-input"
-          placeholder="Enter your email"
-          name="email"
-          [(ngModel)]="email"
-        />
+<div class="auth-wrap">
+  <div class="auth-shell">
+
+    <!-- left pane -->
+    <div class="auth-left">
+      <div>
+        <h2 class="auth-hero">Back under<br/>the bar<em>.</em></h2>
+        <div class="auth-sub">Pick up where you left off. Your streak, your PRs, your next session — all waiting.</div>
+
+        <div class="pv-stack">
+          <div class="pv">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6M12 8a4 4 0 0 1 4 4c0 3-4 9-4 9s-4-6-4-9a4 4 0 0 1 4-4z"/></svg>
+            </div>
+            <div><b>Current streak</b><div class="m">23 days in a row</div></div>
+            <div class="val" style="color: var(--accent);">23d</div>
+          </div>
+          <div class="pv">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18l6-6 4 4 6-8"/></svg>
+            </div>
+            <div><b>Squat est. 1RM</b><div class="m">PR · 2 days ago</div></div>
+            <div class="val">115<span class="mono" style="margin-left:4px">kg</span></div>
+          </div>
+          <div class="pv">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.6 5.6 6 .9-4.3 4.2 1 6-5.3-2.8-5.3 2.8 1-6L3.4 9.5l6-.9z"/></svg>
+            </div>
+            <div><b>Records this month</b><div class="m">squat · deadlift · row</div></div>
+            <div class="val">3</div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="password" class="form-label">Password</label>
-        <input
-          type="password"
-          id="password"
-          class="form-input"
-          placeholder="Enter your password"
-          name="password"
-          [(ngModel)]="password"
-        />
-      <span class="subtitle">
-        If you don’t have an account register :
-        <span class="font-bold text-blue-800">Register here !</span>
-      </span>
+      <div class="auth-foot">
+        <span>v0.3</span>
+      </div>
     </div>
-    <button class="form-button">Sign in</button>
-    </form>
+
+    <!-- right form -->
+    <div class="auth-right">
+      <div>
+        <h2>Sign in</h2>
+        <div class="lead">Welcome back. Ready for another session?</div>
+      </div>
+
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="field">
+          <label for="email">email</label>
+          <div class="input">
+            <span class="ic">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              name="email"
+              [(ngModel)]="email"
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <div class="field" style="margin-top: 16px;">
+          <label for="password">password</label>
+          <div class="input">
+            <span class="ic">
+              <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              name="password"
+              [(ngModel)]="password"
+              autocomplete="current-password"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="cta accent submit" style="margin-top: 24px;">
+          Sign in →
+        </button>
+
+        <div class="foot-line" style="margin-top: 16px;">
+          If you don't have an account : <a href="/register" class="link">Register here !</a>
+        </div>
+
+      </form>
+    </div>
+
   </div>
 </div>
