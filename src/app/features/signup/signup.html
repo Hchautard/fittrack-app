@@ -1,0 +1,108 @@
+<div class="auth-wrap">
+  <div class="auth-shell">
+
+    <!-- left pane -->
+    <div class="auth-left">
+      <div>
+        <h2 class="auth-hero">Start your<br/>journey<em>.</em></h2>
+        <div class="auth-sub">Track every rep, every PR, every milestone. Your fitness story starts here.</div>
+
+        <div class="pv-stack">
+          <div class="pv">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6M12 8a4 4 0 0 1 4 4c0 3-4 9-4 9s-4-6-4-9a4 4 0 0 1 4-4z"/></svg>
+            </div>
+            <div><b>Track your streak</b><div class="m">Stay consistent, day after day</div></div>
+          </div>
+          <div class="pv">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18l6-6 4 4 6-8"/></svg>
+            </div>
+            <div><b>Log your PRs</b><div class="m">Every record, automatically saved</div></div>
+          </div>
+          <div class="pv">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l2.6 5.6 6 .9-4.3 4.2 1 6-5.3-2.8-5.3 2.8 1-6L3.4 9.5l6-.9z"/></svg>
+            </div>
+            <div><b>Visualize progress</b><div class="m">Charts, trends and insights</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="auth-foot">
+        <span>v0.3</span>
+      </div>
+    </div>
+
+    <!-- right form -->
+    <div class="auth-right">
+      <div>
+        <h2>Create account</h2>
+        <div class="lead">Join FitTrack. It's free and takes 30 seconds.</div>
+      </div>
+
+      <form #signupForm="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="field">
+          <label for="name">name</label>
+          <div class="input">
+            <span class="ic">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </span>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your name"
+              name="name"
+              [(ngModel)]="name"
+              autocomplete="name"
+            />
+          </div>
+        </div>
+
+        <div class="field" style="margin-top: 16px;">
+          <label for="email">email</label>
+          <div class="input">
+            <span class="ic">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              name="email"
+              [(ngModel)]="email"
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <div class="field" style="margin-top: 16px;">
+          <label for="password">password</label>
+          <div class="input">
+            <span class="ic">
+              <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            </span>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              name="password"
+              [(ngModel)]="password"
+              autocomplete="new-password"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="cta accent submit" style="margin-top: 24px;">
+          Create account →
+        </button>
+
+        <div class="foot-line" style="margin-top: 16px;">
+          Already have an account? <a href="/auth/login" class="link">Sign in here !</a>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</div>
