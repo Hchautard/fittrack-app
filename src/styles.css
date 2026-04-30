@@ -40,7 +40,13 @@
 }
 
 html, body {
-  height: 100%;
+  /*height: 100%;*/
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 body {
@@ -231,11 +237,12 @@ h1, h2, h3, h4 {
 }
 
 /* Page login/signup */
-:host {
+.auth-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 24px;
 }
 
 .auth-shell {
