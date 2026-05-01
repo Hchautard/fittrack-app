@@ -1,5 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 class User {
   id: number;
@@ -21,6 +22,7 @@ export default class AuthService {
   private isAuthenticated: boolean = false;
   private apiDevUrl: string = 'http://localhost:8080';
   private createRoute : string = '/api/users/create';
+  private loginRoute : string = '/auth/login';
   constructor(){
   }
 
@@ -44,12 +46,11 @@ export default class AuthService {
     return false;
   }
 
-  login(email: string, password: string): boolean {
-    if (email && password) {
-      this.isAuthenticated = true;
-      return true;
-    }
-    return false;
+  // @ts-ignore
+  login(email: string, password: string): Observable<any> {
+    const url = this.apiDevUrl + this.loginRoute;
+    const body = { email, password };
+    return this.http.post<User>(url, body);
   }
 
   logout(): void {
