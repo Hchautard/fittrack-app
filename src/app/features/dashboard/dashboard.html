@@ -1,1 +1,266 @@
-<p>dashboard works!</p>
+<div class="dash-layout">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo"></div>
+      <span class="brand-name">fittrack<em>/</em></span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="nav-item active" href="#">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a class="nav-item" href="#">
+        <svg viewBox="0 0 24 24"><path d="M4 18l6-6 4 4 6-8"/></svg>
+        Progress
+      </a>
+      <a class="nav-item" href="#">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        Sessions
+      </a>
+      <a class="nav-item" href="#">
+        <svg viewBox="0 0 24 24"><path d="M6 4h12M6 20h12M4 8h16M4 16h16"/></svg>
+        Exercises
+      </a>
+      <a class="nav-item" href="#">
+        <svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .9-4.3 4.2 1 6-5.3-2.8-5.3 2.8 1-6L3.4 9.5l6-.9z"/></svg>
+        Records
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="user-chip">
+        <div class="user-avatar">JD</div>
+        <div class="user-info">
+          <span class="user-name">John Doe</span>
+          <span class="user-plan mono">pro plan</span>
+        </div>
+      </div>
+      <button class="logout-btn" title="Sign out">
+        <svg viewBox="0 0 24 24"><path d="M16 17l5-5-5-5M21 12H9M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="dash-main">
+
+    <!-- Top bar -->
+    <header class="dash-header">
+      <div>
+        <h1 class="dash-title">Dashboard</h1>
+        <p class="dash-date mono">Monday, 22 April 2026</p>
+      </div>
+      <div class="header-actions">
+        <div class="streak-badge">
+          <span class="dot"></span>
+          <span class="mono">23 day streak</span>
+        </div>
+        <button class="cta accent">+ Log session</button>
+      </div>
+    </header>
+
+    <!-- KPI row -->
+    <section class="kpi-row">
+      <div class="kpi-card">
+        <div class="kpi-icon ic accent">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 18l6-6 4 4 6-8"/></svg>
+        </div>
+        <div class="kpi-body">
+          <span class="kpi-label mono">Sessions this week</span>
+          <span class="kpi-val">4 <span class="kpi-unit">/ 5</span></span>
+        </div>
+        <div class="kpi-trend up">↑ 1</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon ic accent">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 3l2.6 5.6 6 .9-4.3 4.2 1 6-5.3-2.8-5.3 2.8 1-6L3.4 9.5l6-.9z"/></svg>
+        </div>
+        <div class="kpi-body">
+          <span class="kpi-label mono">PRs this month</span>
+          <span class="kpi-val">3</span>
+        </div>
+        <div class="kpi-trend up">↑ 2</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon ic accent">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 4h12v2l-4 6 4 6v2H6v-2l4-6-4-6V4z"/></svg>
+        </div>
+        <div class="kpi-body">
+          <span class="kpi-label mono">Total volume (kg)</span>
+          <span class="kpi-val">12,480</span>
+        </div>
+        <div class="kpi-trend up">↑ 8%</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-icon ic accent">
+          <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <div class="kpi-body">
+          <span class="kpi-label mono">Avg session time</span>
+          <span class="kpi-val">62 <span class="kpi-unit">min</span></span>
+        </div>
+        <div class="kpi-trend down">↓ 3min</div>
+      </div>
+    </section>
+
+    <!-- Charts grid -->
+    <section class="charts-grid">
+
+      <!-- Volume chart mockup -->
+      <div class="chart-card wide">
+        <div class="chart-header">
+          <div>
+            <h3 class="chart-title">Weekly Volume</h3>
+            <p class="chart-sub mono">kg lifted per session · last 8 weeks</p>
+          </div>
+          <div class="chart-tabs">
+            <button class="chart-tab on">8w</button>
+            <button class="chart-tab">3m</button>
+            <button class="chart-tab">1y</button>
+          </div>
+        </div>
+        <div class="chart-mockup bar-mockup">
+          <div class="mock-bars">
+            <div class="mock-bar" style="--h: 52%"><div class="mock-bar-fill"></div></div>
+            <div class="mock-bar" style="--h: 68%"><div class="mock-bar-fill"></div></div>
+            <div class="mock-bar" style="--h: 45%"><div class="mock-bar-fill"></div></div>
+            <div class="mock-bar" style="--h: 80%"><div class="mock-bar-fill"></div></div>
+            <div class="mock-bar" style="--h: 60%"><div class="mock-bar-fill"></div></div>
+            <div class="mock-bar" style="--h: 74%"><div class="mock-bar-fill"></div></div>
+            <div class="mock-bar" style="--h: 88%"><div class="mock-bar-fill"></div></div>
+            <div class="mock-bar active" style="--h: 95%"><div class="mock-bar-fill"></div></div>
+          </div>
+          <div class="mock-labels">
+            <span class="mono">w17</span><span class="mono">w18</span><span class="mono">w19</span>
+            <span class="mono">w20</span><span class="mono">w21</span><span class="mono">w22</span>
+            <span class="mono">w23</span><span class="mono">w24</span>
+          </div>
+          <div class="mock-placeholder-text">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+            Connect data to see your chart
+          </div>
+        </div>
+      </div>
+
+      <!-- 1RM progress mockup -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <h3 class="chart-title">Est. 1RM Progress</h3>
+            <p class="chart-sub mono">squat · bench · deadlift</p>
+          </div>
+        </div>
+        <div class="chart-mockup line-mockup">
+          <svg class="mock-line-svg" viewBox="0 0 260 120" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="lg1" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="var(--accent)" stop-opacity=".25"/>
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="lg2" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="var(--accent-2)" stop-opacity=".2"/>
+                <stop offset="100%" stop-color="var(--accent-2)" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- Squat line -->
+            <path d="M0 90 C30 85, 60 70, 90 65 C120 58, 150 50, 180 42 C210 35, 240 28, 260 20" stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M0 90 C30 85, 60 70, 90 65 C120 58, 150 50, 180 42 C210 35, 240 28, 260 20 L260 120 L0 120 Z" fill="url(#lg1)"/>
+            <!-- Deadlift line -->
+            <path d="M0 100 C30 95, 60 88, 90 80 C120 72, 150 65, 180 58 C210 52, 240 44, 260 38" stroke="var(--accent-2)" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="4 3"/>
+          </svg>
+          <div class="mock-legend">
+            <span class="legend-item"><span class="legend-dot" style="background: var(--accent)"></span><span class="mono">Squat</span></span>
+            <span class="legend-item"><span class="legend-dot" style="background: var(--accent-2); opacity:.7"></span><span class="mono">Deadlift</span></span>
+          </div>
+          <div class="mock-placeholder-text">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+            Connect data to see your chart
+          </div>
+        </div>
+      </div>
+
+      <!-- Muscle heatmap mockup -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div>
+            <h3 class="chart-title">Muscle Focus</h3>
+            <p class="chart-sub mono">volume distribution · this week</p>
+          </div>
+        </div>
+        <div class="chart-mockup heatmap-mockup">
+          <div class="heatmap-grid">
+            <div class="hm-row">
+              <span class="hm-label mono">Chest</span>
+              <div class="hm-bar"><div class="hm-fill" style="--p: 72%"></div></div>
+              <span class="hm-pct mono">72%</span>
+            </div>
+            <div class="hm-row">
+              <span class="hm-label mono">Back</span>
+              <div class="hm-bar"><div class="hm-fill" style="--p: 88%"></div></div>
+              <span class="hm-pct mono">88%</span>
+            </div>
+            <div class="hm-row">
+              <span class="hm-label mono">Legs</span>
+              <div class="hm-bar"><div class="hm-fill" style="--p: 95%"></div></div>
+              <span class="hm-pct mono">95%</span>
+            </div>
+            <div class="hm-row">
+              <span class="hm-label mono">Shoulders</span>
+              <div class="hm-bar"><div class="hm-fill" style="--p: 50%"></div></div>
+              <span class="hm-pct mono">50%</span>
+            </div>
+            <div class="hm-row">
+              <span class="hm-label mono">Arms</span>
+              <div class="hm-bar"><div class="hm-fill" style="--p: 40%"></div></div>
+              <span class="hm-pct mono">40%</span>
+            </div>
+          </div>
+          <div class="mock-placeholder-text">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg>
+            Connect data to see your chart
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Recent sessions -->
+    <section class="recent-section">
+      <div class="section-header">
+        <h3 class="chart-title">Recent Sessions</h3>
+        <a href="#" class="link mono">view all →</a>
+      </div>
+      <div class="sessions-list">
+        <div class="session-row">
+          <div class="session-date mono">Mon 21 Apr</div>
+          <div class="session-name">Upper A — Push</div>
+          <div class="session-meta mono">62 min · 4,200 kg</div>
+          <div class="session-badge pr">PR</div>
+        </div>
+        <div class="session-row">
+          <div class="session-date mono">Sat 19 Apr</div>
+          <div class="session-name">Lower — Squat focus</div>
+          <div class="session-meta mono">71 min · 5,840 kg</div>
+          <div class="session-badge pr">PR</div>
+        </div>
+        <div class="session-row">
+          <div class="session-date mono">Thu 17 Apr</div>
+          <div class="session-name">Upper B — Pull</div>
+          <div class="session-meta mono">58 min · 3,960 kg</div>
+          <div class="session-badge"></div>
+        </div>
+        <div class="session-row">
+          <div class="session-date mono">Tue 15 Apr</div>
+          <div class="session-name">Full Body — Deload</div>
+          <div class="session-meta mono">45 min · 2,100 kg</div>
+          <div class="session-badge"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
