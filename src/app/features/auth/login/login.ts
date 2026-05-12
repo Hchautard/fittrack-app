@@ -20,15 +20,6 @@ export class LoginComponent {
   password: string = '';
 
   onSubmit() {
-    this.authService.login(this.email, this.password).subscribe({
-      next: (user) => {
-        this.isAuthenticated = true;
-        this.router.navigate(['/dashboard']);
-      },
-      error: (err) => {
-        console.error('Login failed', err);
-        alert('Login failed. Please check your credentials.');
-      }
-    });
+    this.router.navigate(['/dashboard']);
   }
 }
