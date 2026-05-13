@@ -1,18 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {User} from '@models/user';
 
-class User {
-  id: number;
-  email: string;
-  name: string;
 
-  constructor(id: number, email: string, name: string) {
-    this.id = id;
-    this.email = email;
-    this.name = name;
-  }
-}
 
 @Injectable({
   providedIn: 'root'
