@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
-import {User} from '@models/user';
+import {Exercise} from '@models/exercise';
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
+export class ExerciseService {
 
-  getAllUsers(): undefined {
+  getAllExercise(): undefined {
     // TODO: Replace with real data fetching logic
   }
 
